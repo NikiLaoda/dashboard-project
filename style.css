@@ -8,7 +8,7 @@ body {
     font-size: 14px;
 
     --lb-color: #3b82f6;
-    --rb-color: #cbd5e1;
+    --rb-color: #d8dfe7;
     --bx-shadow: 0 0 12px 1px rgba(128, 128, 128, 0.21);
 }
 
@@ -87,7 +87,8 @@ body {
     background-color: var(--rb-color);
 
     display: grid;
-    grid-template-rows: 2fr 4fr 4fr;
+    grid-template-rows: 1fr 4fr 4fr;
+    gap: 4vh;
 }
 
 .upper-board {
@@ -97,6 +98,8 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 2fr;
+
+    padding-top: 1vh;
 }
 
 .ub-childOne {
@@ -176,23 +179,119 @@ input:focus {
 
 .ub-childTwo {
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 7fr 4fr;
 }
 
 .greetings-container {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 16px;
+
+    padding: 0 5vw 0 2vw;
+}
+
+.gc-childOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .buttons-container {
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
 }
 
+.ub-btn {
+    background-color: var(--lb-color);
+    cursor: pointer;
+
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 24px;
+    padding: 8px 22px 8px 22px;
+}
+
+.ub-btn:active {
+    background-color: var(--rb-color);
+    transition-duration: 50ms;
+}
 
 .lower-board {
     grid-row: 2 / 5;
+
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 2vw;
+    padding: 0 2vw 6vh 2vw;
 }
 
-h1, li {
+.lb-left {
+    grid-template-columns: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    gap: 8px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 1vw;
+}
+
+.card {
+    background-color: white;
+    border-left: 12px solid goldenrod;
+    border-radius: 6px;
+    box-shadow: var(--bx-shadow);
+
+    padding: 28px 18px 22px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-p {
+    font-size: 16px;
+    margin-bottom: 0.5vh;
+}
+
+.card-random {
+    margin-bottom: 6vh;
+    color: rgb(82, 82, 82);
+}
+
+.svgs-card {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: end;
+}
+
+.lb-right {
+    border: 1px solid red;
+    grid-template-columns: 2 / 3;
+}
+
+h1, li, h5, h3, p {
     padding: 0;
     margin: 0;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 18px;
 }

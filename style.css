@@ -96,23 +96,21 @@ body {
     box-shadow: var(--bx-shadow);
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 .ub-childOne {
     display: grid;
-    grid-template-columns: 8fr 5fr;
+    grid-template-columns: 8fr 4fr;
 }
 
 .searching-container {
-    border: 1px solid blue;
-
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 
-    padding: 0 10vw 0 24px;
+    padding: 0 5vw 0 2vw;
 }
 
 .search-bar {
@@ -141,16 +139,57 @@ input:focus {
 }
 
 .avatar-container {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+
+    padding-left: 6vw;
+    gap: 24px;
+}
+
+.lucide-cat {
+    border: 1px solid black;
+    border-radius: 24px;
+
+    padding: 4px;
+}
+
+.lucide-bell {
+    cursor: pointer;
+}
+
+.lucide-bell:active {
+    color: var(--lb-color);
+    transition-duration: 50ms;
+}
+
+.lucide-cat {
+    cursor: pointer;
+}
+
+.lucide-cat:active {
+    color: var(--lb-color);
+    border-color: var(--lb-color);
+    transition-duration: 50ms;
 }
 
 .ub-childTwo {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
 }
+
+.greetings-container {
+    border: 1px solid red;
+}
+
+.buttons-container {
+    border: 1px solid blue;
+}
+
 
 .lower-board {
     grid-row: 2 / 5;
-
-
 }
 
 h1, li {

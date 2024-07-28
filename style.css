@@ -237,7 +237,6 @@ input:focus {
     display: flex;
     flex-direction: column;
     align-items: start;
-
     gap: 8px;
 }
 
@@ -279,8 +278,60 @@ input:focus {
 }
 
 .lb-right {
-    border: 1px solid red;
     grid-template-columns: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ann-card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: var(--bx-shadow);
+
+    padding: 28px 18px 28px 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.at-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.ann-p {
+    font-size: 16px;
+    margin-bottom: 0.5vh;
+}
+
+.trend-card {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1vh;
+    gap: 8px;
+}
+
+.trend-block {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: var(--bx-shadow);
+
+    padding: 18px 18px 18px 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.trend-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 8px;
 }
 
 h1, li, h5, h3, p {

@@ -87,7 +87,7 @@ body {
     background-color: var(--rb-color);
 
     display: grid;
-    grid-template-rows: 2fr repeat(2, 4fr);
+    grid-template-rows: 2fr 4fr 4fr;
 }
 
 .upper-board {
@@ -96,15 +96,55 @@ body {
     box-shadow: var(--bx-shadow);
 
     display: grid;
-    grid-row: auto;
+    grid-template-rows: 1fr 1fr;
 }
 
 .ub-childOne {
+    display: grid;
+    grid-template-columns: 8fr 5fr;
+}
+
+.searching-container {
     border: 1px solid blue;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 10vw 0 24px;
+}
+
+.search-bar {
+    background-color: var(--rb-color);
+    border-radius: 12px;
+    border-color: transparent;
+    padding: 3px 2px 3px 8px;
+
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+
+    border: 1.5px solid rgb(108, 108, 108);
+    transition-duration: 50ms;
+}
+
+.lucide-search {
+    cursor: pointer;
+}
+
+.lucide-search:active {
+    color: var(--lb-color);
+    transition-duration: 50ms;
+}
+
+.avatar-container {
+    border: 1px solid red;
 }
 
 .ub-childTwo {
-    border: 1px solid red;
 }
 
 .lower-board {

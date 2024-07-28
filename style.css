@@ -7,7 +7,9 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
 
-    --db-color: #3b82f6;
+    --lb-color: #3b82f6;
+    --rb-color: #cbd5e1;
+    --bx-shadow: 0 0 12px 1px rgba(128, 128, 128, 0.21);
 }
 
 .dashboard-section {
@@ -19,7 +21,7 @@ body {
 
 .left-board {
     color: white;
-    background-color: var(--db-color);
+    background-color: var(--lb-color);
 
     display: flex;
     flex-direction: column;
@@ -82,21 +84,33 @@ body {
 
 .right-board {
     height: 100vh;
+    background-color: var(--rb-color);
 
     display: grid;
-    grid-template-rows: 3fr repeat(3, 4fr);
+    grid-template-rows: 2fr repeat(2, 4fr);
 }
 
 .upper-board {
-    border: 1px solid blue;
-
     grid-template-rows: 1 / 2;
+    background-color: white;
+    box-shadow: var(--bx-shadow);
+
+    display: grid;
+    grid-row: auto;
+}
+
+.ub-childOne {
+    border: 1px solid blue;
+}
+
+.ub-childTwo {
+    border: 1px solid red;
 }
 
 .lower-board {
-    border: 1px solid red;
-
     grid-row: 2 / 5;
+
+
 }
 
 h1, li {

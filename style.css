@@ -13,7 +13,6 @@ body {
 .dashboard-section {
     display: grid; 
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr;
 
     height: 100vh;
 }
@@ -83,6 +82,21 @@ body {
 
 .right-board {
     height: 100vh;
+
+    display: grid;
+    grid-template-rows: 3fr repeat(3, 4fr);
+}
+
+.upper-board {
+    border: 1px solid blue;
+
+    grid-template-rows: 1 / 2;
+}
+
+.lower-board {
+    border: 1px solid red;
+
+    grid-row: 2 / 5;
 }
 
 h1, li {
